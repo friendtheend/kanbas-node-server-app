@@ -29,7 +29,7 @@ Hello(app);
 const allowedOrigins = [
     "http://localhost:3000",
     "https://euphonious-creponne-f9e1bf.netlify.app",
-    "https://a6--euphonious-creponne-f9e1bf.netlify.app",
+    "https://kanbas-react-web-app1.netlify.app/",
 ];
 
 app.use(
