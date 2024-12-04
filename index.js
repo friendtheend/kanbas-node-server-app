@@ -19,32 +19,32 @@ const app = express();
 
 
 Hello(app);
-// app.use(
-//     cors({
-//       credentials: true,
-//       origin: process.env.NETLIFY_URL || "http://localhost:3000",
-//     })
-// );
-
-const allowedOrigins = [
-    "http://localhost:3000",
-    "https://euphonious-creponne-f9e1bf.netlify.app",
-    "https://kanbas-react-web-app1.netlify.app/",
-];
-
 app.use(
     cors({
-
-        credentials: true,
-        origin: (origin, callback) => {
-            if (allowedOrigins.includes(origin) || !origin) {
-                callback(null, true); // 允许请求
-            } else {
-                callback(new Error("不允许的跨域请求")); // 拦截请求
-            }
-        },
+      credentials: true,
+      origin: process.env.NETLIFY_URL || "http://localhost:3000",
     })
 );
+
+// const allowedOrigins = [
+//     "http://localhost:3000",
+//     "https://euphonious-creponne-f9e1bf.netlify.app",
+//     "https://kanbas-react-web-app1.netlify.app/",
+// ];
+//
+// app.use(
+//     cors({
+//
+//         credentials: true,
+//         origin: (origin, callback) => {
+//             if (allowedOrigins.includes(origin) || !origin) {
+//                 callback(null, true); // 允许请求
+//             } else {
+//                 callback(new Error("不允许的跨域请求")); // 拦截请求
+//             }
+//         },
+//     })
+// );
 
 
 const sessionOptions = {
