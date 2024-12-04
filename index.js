@@ -11,8 +11,8 @@ import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 import session from "express-session";
 import EnrollmentRoutes from './Kanbas/Enrollments/route.js';
 
-const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
-mongoose.connect(CONNECTION_STRING);
+// const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
+mongoose.connect("mongodb+srv://luyifeng0131:123670722@kanbas.vlxqd.mongodb.net/Kanbas?retryWrites=true&w=majority&appName=Kanbas");
 
 
 const app = express();
